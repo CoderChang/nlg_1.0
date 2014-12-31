@@ -1,0 +1,756 @@
+MA: askrepeat()
+{
+没听清楚,再说一遍呗,求求求	1
+}
+
+MA:	bye()
+{
+再见	1
+果的拜	1
+哦也,又可以睡觉去了	1
+}
+
+MA: confirm(__tgt1__="all",slot1="all")
+{
+请问你是要找[all]的吗?   1
+}
+
+MA:	confirm(__tgt1__="taste",slot1="taste")
+{
+请问你是要找口味[taste]一点的吗	1
+}
+
+MA:	confirm(__tgt1__="seller",slot1="seller")
+{
+我猜，你是在找[seller]	1
+请问你是要找[seller]吗	1
+你是在找[seller]吗	1
+}
+
+MA:	confirm(__tgt1__="pnum",slot1="pnum")
+{
+你们是[pnum]个人一起是吧	1
+请问你们是[pnum]个人一起吗	1
+}
+
+MA:	confirm(__tgt1__="time",slot1="time")
+{
+你是要[time]过去吗		1
+}
+
+MA:	confirm(__tgt1__="ftype",slot1="ftype")
+{
+你是要找[ftype]是吧	1
+请问你是要找[ftype]吗	1
+}
+
+MA:	confreq(__tgt1__="price",slot1="price";__tgt2__="taste")
+{
+价位在[price]的哇，请问你想要什么口味的呢	1
+[price]这个价位的么，你想吃什么口味的呢	1
+}
+
+MA:	confreq(__tgt1__="price",slot1="price";__tgt2__="pnum")
+{
+价格在[price]的哇，那要看你是几个人一起咯	1
+[price]这个价位的嘛，请问你们有多少人	1
+请问你要价格在[price]的几人套餐呢	1
+}
+
+MA:	confreq(__tgt1__="price",slot1="price";__tgt2__="ftype")
+{
+请问你要找价格为[price]的什么美食呢，是火锅还是自助或是其它的？	1
+}
+
+MA:	confreq(__tgt1__="price",slot1="price";__tgt2__="fname")
+{
+价位在[price]的嘛，请问你有想要吃的菜么	1
+}
+
+MA:	confreq(__tgt1__="taste",slot1="taste";__tgt2__="price")
+{
+[taste]的话，你预期价格是多少	1
+口味[taste]的，价位在多少你能接受呢	1
+}
+
+MA:	confreq(__tgt1__="taste",slot1="taste";__tgt2__="pnum")
+{
+口味[taste]的，你们是几个人吃呢	1
+口味[taste]的，你想要几人套餐	 1
+}
+
+MA:	confreq(__tgt1__="taste",slot1="taste";__tgt2__="ftype")
+{
+口味[taste]，请问你想吃哪一个菜系的呢	1
+}
+
+MA:	confreq(__tgt1__="area",slot1="area";__tgt2__="price")
+{
+[area]附近的，你想吃多少钱的	1
+}
+
+MA:	confreq(__tgt1__="area",slot1="area";__tgt2__="taste")
+{
+[area]那块的话，你想吃什么口味的呢	1
+}
+
+MA:	confreq(__tgt1__="area",slot1="area";__tgt2__="pnum")
+{
+你们打算几个人去[area]那吃饭呢	1
+}
+
+MA:	confreq(__tgt1__="area",slot1="area";__tgt2__="ftype")
+{
+你们想要去[area]那去吃什么呢	1
+}
+
+MA:	confreq(__tgt1__="seller",slot1="seller";__tgt2__="price")
+{
+[seller]哇，你们想要吃什么价位的？	1
+}
+
+MA:	confreq(__tgt1__="seller",slot1="seller";__tgt2__="taste")
+{
+[seller]还不错哦，那你们想吃什么口味的呢	1
+}
+
+MA:	confreq(__tgt1__="seller",slot1="seller";__tgt2__="pnum")
+{
+[seller]是吧，懂了，你们是几个人吃呢	1
+}
+
+MA:	confreq(__tgt1__="pnum",slot1="pnum";__tgt2__="price")
+{
+[pnum]人套餐的话，你们预算是多少	1
+你想吃价位在多少的[pnum]人套餐呢	1
+}
+
+MA:	confreq(__tgt1__="pnum",slot1="pnum";__tgt2__="taste")
+{
+[pnum]人套餐，明白，那你们想要什么口味的	1
+}
+
+MA:	confreq(__tgt1__="pnum",slot1="pnum";__tgt2__="ftype")
+{
+[pnum]人套餐，那你们想吃什么，火锅还是湘菜，或者其它的？
+  
+MA: confreq(__tgt1__="promise",slot1="promise";__tgt2__="price")
+{
+要有[promise]的是吧，那你想要吃什么价位的	1
+}
+
+MA:	confreq(__tgt1__="promise",slot1="promise";__tgt2__="taste")
+{
+要有[promise]的是吧，那你想要吃什么口味的	1
+}
+
+MA:	confreq(__tgt1__="promise",slot1="promise";__tgt2__="pnum")
+{
+要有[promise]的是吧，那你们有几个人一起呢	1
+}
+
+MA:	confreq(__tgt1__="promise",slot1="promise";__tgt2__="ftype")
+{
+要有[promise]的是吧，那你们想吃什么类型的呢，火锅，湘菜，还是其它的？	1
+}
+
+MA:	confreq(__tgt1__="date",slot1="date";__tgt2__="price")
+{
+[date]是吧，想要什么价位的	1
+}
+
+MA:	confreq(__tgt1__="date",slot1="date";__tgt2__="taste")
+{
+[date]是吧，想要什么口味的	1
+}
+
+MA:	confreq(__tgt1__="date",slot1="date";__tgt2__="pnum")
+{
+[date]是吧，有几个人呢	1
+}
+
+MA:	confreq(__tgt1__="date",slot1="date";__tgt2__="ftype")
+{
+[date]是吧，那你们想吃什么类型的呢，火锅，湘菜，还是其它的？	1
+}
+
+MA:	confreq(__tgt1__="time",slot1="time";__tgt2__="price")
+{
+[time]是吧，那什么价位你觉得OK？	1
+}
+
+MA:	confreq(__tgt1__="time",slot1="time";__tgt2__="taste")
+{
+[time]是吧，那你要吃什么口味的？	1
+}
+
+MA:	confreq(__tgt1__="time",slot1="time";__tgt2__="pnum")
+{
+[time]消费的，那你们是几个人？	1
+}
+
+MA:	confreq(__tgt1__="time",slot1="time";__tgt2__="ftype")
+{
+[time]是吧，那你们想吃什么类型的呢，火锅，湘菜，还是其它的？	1
+}
+
+MA:	confreq(__tgt1__="ftype",slot1="ftype";__tgt2__="price")
+{
+请问你想吃价位多少的[ftype]呢	1
+}
+
+MA:	confreq(__tgt1__="ftype",slot1="ftype";__tgt2__="pnum")
+{
+请问你想要几人的[ftype]套餐呢	1
+}
+
+MA:	confreq(__tgt1__="fname",slot1="fname";__tgt2__="price")
+{
+想吃[fname]是吧，想要什么价位的呢？	1
+}
+
+MA:	confreq(__tgt1__="fname",slot1="fname";__tgt2__="taste")
+{
+想吃[fname]是吧，想要什么价位的呢？	1
+}
+
+MA:	confreq(__tgt1__="fname",slot1="fname";__tgt2__="pnum")
+{
+想吃[fname]是吧，你们有几个人呢	1
+}
+
+MA:	confreq(__tgt1__="style",slot1="style";__tgt2__="price")
+{
+适合[style]的餐馆，那你想要什么价位的	1
+}
+
+MA:	confreq(__tgt1__="style",slot1="style";__tgt2__="taste")
+{
+适合[style]的餐馆，那你想要什么口味的	1
+}
+
+MA:	confreq(__tgt1__="style",slot1="style";__tgt2__="pnum")
+{
+适合[style]的餐馆，那你们有几个人一起呢	1
+}
+
+MA:	confreq(__tgt1__="style",slot1="style";__tgt2__="ftype")
+{
+适合[style]的餐馆么，那你想吃什么，是湘菜，还是火锅，或者其它的？	1
+}
+
+MA:	confrestart()
+{
+为嘛又重新开始,这是我今天的第1024次重启了,好吧好吧	1
+}
+
+MA:	findalt(__tgt1__="promise",slot1="promise")
+{
+找到了下面几个，不过没有[promise]的,要不,委屈下？	1
+}
+
+MA:	findalt(__tgt1__="price",slot1="price")
+{
+没有找到你要的价格为[price]的团购，下面推荐的几个看看有没有合适的	1
+}
+
+MA:	findalt(__tgt1__="taste",slot1="taste")
+{
+没有找到你要得口味[taste]的团购，不过有下面几个比较接近的 	1
+}
+
+MA:	findalt(__tgt1__="seller",slot1="seller")
+{
+[seller]好像还没有团购，要不要考虑下面几个？	1
+}
+
+MA:	findalt(__tgt1__="dtype",slot1="dtype")
+{
+好像没有你要的[dtype],下面几个可以么？	1
+}
+
+MA:	findalt(__tgt1__="site",slot1="site")
+{
+[site]没有你要的团购，不过其它网站有哦	1
+没有找到[site]的团购，看看下面其它几个网站的怎么样？	1
+}
+
+MA:	findalt(__tgt1__="ftype",slot1="ftype")
+{
+没有找到你要的[ftype],不妨尝尝下面几个？	1
+}
+
+MA:	findalt(__tgt1__="vote",slot1="vote")
+{
+没有找到评价[vote]的团购，不过，看看下面几个有没有你要的？	1
+}
+
+MA:	findalt(__tgt1__="style",slot1="style")
+{
+暂时木有找到适合[style]的餐馆，看看这几个怎么样？	1
+}
+
+MA:	findalt(__tgt1__="fname",slot1="fname")
+{
+对不起，没有找到[fname]，要不看看下面的菜肿么样 	1
+}
+
+MA:	findalt(__tgt1__="area",slot1="area")
+{
+对不起，没有在[area]附近找到你要的团购，要不费费脚力看看下面几个怎么样	1
+}
+
+MA:	findalt(__tgt1__="score",slot1="score")
+{
+看来你品味不错哦，可惜没有找到，要不委屈下看看下面几个怎么样	1
+}
+
+MA:	findalt(__tgt1__="avgprice",slot1="avgprice")
+{
+对不起，没有找到人均[avgprice]的团购，要不，瞅瞅下面的何如？	1
+}
+
+MA:	findalt(__tgt1__="pnum",slot1="pnum")
+{
+对不起，没有找到[pnum]人套餐团购，要不，瞅瞅下面的何如？	1
+}
+
+MA:	findalt(__tgt1__="id",slot1="id")
+{
+木有问题	1
+}
+
+MA:	findalt()
+{
+对不起，暂时没有找到你要的团购,看看下面几个怎么样	1
+}
+
+MA:	hangup()
+{
+木有问题!	1
+诺!	1
+遵命,主人。	1
+}
+
+MA:	hello()
+{
+哈咯	1
+要团购么,买一送一哦,包邮哦,亲	1
+你好,要团购么,分分钟句句话的事,说吧,要啥样的	1
+}
+
+MA:	offerconf(__tgt1__="all",slot1="all";__tgt2__="seller",slot2="seller")
+{
+为你找到了[all]，你是要找[seller]么？	1
+}
+
+MA:	offerconf(__tgt1__="all",slot1="all";__tgt2__="ftype",slot2="ftype")
+{
+为你找到了[all]，你是要找[ftype]么？	1
+}
+
+MA:	offerconf(__tgt1__="all",slot1="all";__tgt2__="fname",slot2="fname")
+{
+为你找到了[all]，你是要找[fname]么？	1
+}
+
+MA:	offerconf(__tgt1__="seller",slot1="seller";__tgt2__="ftype",slot2="ftype")
+{
+为你找到了[seller]的团购，请问你是要[ftype]吗	1
+}
+
+MA:	offerconf(__tgt1__="seller",slot1="seller";__tgt2__="fname",slot2="fname")
+{
+为你找到了[seller]的团购，请问你是要[fname]吗	1
+}
+
+MA:	offerconf(__tgt1__="pnum",slot1="pnum";__tgt2__="seller",slot2="seller")
+{
+为你找到了[pnum]人套餐，请问你是要[seller]的么?	1
+}
+
+MA:	offerconf(__tgt1__="pnum",slot1="pnum";__tgt2__="ftype",slot2="ftype")
+{
+[pnum]人套餐有下面几个，请问[ftype]怎么样?
+
+# offerconf(__tgt1__="pnum",slot1="pnum";__tgt2__="fname",slot2="fname")
+# {
+# 为你找到了以下[pnum]人套餐，来一道[fname]怎么样?	1
+# }
+
+MA:	offerconf(__tgt1__="promise",slot1="promise";__tgt2__="seller",slot2="seller")
+{
+为你找到了下面几个[promise]的团购，[seller]怎么样?	1
+}
+
+MA:	offerconf(__tgt1__="promise",slot1="promise";__tgt2__="ftype",slot2="ftype")
+{
+为你找到了下面几个[promise]的团购，要不来一个[ftype]?	1
+}
+
+MA:	offerconf(__tgt1__="promise",slot1="promise";__tgt2__="fname",slot2="fname")
+{
+为你找到了下面几个[promise]的团购，要不来一道[fname]?	1
+}
+
+MA:	offerconf(__tgt1__="ftype",slot1="ftype";__tgt2__="seller",slot2="seller")
+{
+找到了下面几家[ftype]团购，你看[seller]怎么样？	1
+}
+
+MA:	offerconf(__tgt1__="ftype",slot1="ftype";__tgt2__="fname",slot2="fname")
+{
+找到了下面几家[ftype]团购，要不来一道[fname]?	1
+}
+
+MA:	offerconf(__tgt1__="fname",slot1="fname";__tgt2__="seller",slot2="seller")
+{
+为你找到[fname]的团购，要不要尝尝[seller]他们家的?	 1
+}
+
+MA:	offerreq(__tgt1__="all",slot1="all";__tgt2__="price")
+{
+为你找到了[all]的团购，请问你要什么价位的？	1
+}
+
+MA:	offerreq(__tgt1__="all",slot1="all";__tgt2__="taste")
+{
+为你找到了[all]的团购，请问你要什么口味的？	1
+}
+
+MA:	offerreq(__tgt1__="all",slot1="all";__tgt2__="pnum")
+{
+为你找到了[all]的团购，请问你要几人套餐？	1
+}
+
+MA:	offerreq(__tgt1__="all",slot1="all";__tgt2__="ftype")
+{
+为你找到了[all]的团购，请问你要吃什么类型的，川菜，还是项词啊，或者其它的？	1
+}
+
+MA:	offerreq(__tgt1__="seller",slot1="seller";__tgt2__="price")
+{
+为你找到[seller]的团购，请问你要什么价位的?	1
+}
+
+MA:	offerreq(__tgt1__="seller",slot1="seller";__tgt2__="taste")
+{
+为你找到[seller]的团购，请问你要什么口味的?	1
+}
+
+MA:	offerreq(__tgt1__="seller",slot1="seller";__tgt2__="pnum")
+{
+为你找到[seller]的团购，请问你要几人套餐?	1
+}
+
+MA:	offerreq(__tgt1__="pnum",slot1="pnum";__tgt2__="price")
+{
+为你找到了[pnum]人套餐，请问你要什么价位的？	1
+}
+
+MA:	offerreq(__tgt1__="pnum",slot1="pnum";__tgt2__="taste")
+{
+为你找到了[pnum]人套餐，请问你要什么口味的？	1
+}
+
+MA:	offerreq(__tgt1__="pnum",slot1="pnum";__tgt2__="ftype")
+{
+为你找到了[pnum]人套餐，请问你要吃什么，湘菜，川菜，还是其它的？	1
+}
+
+MA:	offerreq(__tgt1__="promise",slot1="promise";__tgt2__="price")
+{
+为你找到了[promise]的团购，请问你要什么价位的？	1
+}
+
+MA:	offerreq(__tgt1__="promise",slot1="promise";__tgt2__="taste")
+{
+为你找到了[promise]的团购，请问你要什么口味的？	1
+}
+
+MA:	offerreq(__tgt1__="promise",slot1="promise";__tgt2__="pnum")
+{
+为你找到了[promise]的团购，请问你是几个人吃？	1
+}
+
+MA:	offerreq(__tgt1__="promise",slot1="promise";__tgt2__="ftype")
+{
+为你找到了[promise]的团购，请问你要吃什么，川菜，湘菜还是其它的？	1
+}
+
+MA:	offerreq(__tgt1__="ftype",slot1="ftype";__tgt2__="price")
+{
+为你找到了[ftype],请问你要什么价位的？	1
+}
+
+MA:	offerreq(__tgt1__="ftype",slot1="ftype";__tgt2__="pnum")
+{
+为你找到了[ftype],请问你们几个人吃？	1
+}
+
+MA:	offerreq(__tgt1__="fname",slot1="fname";__tgt2__="price")
+{
+为你找到了[fname]团购，请问你要什么价位的？	1
+}
+
+MA:	offerreq(__tgt1__="fname",slot1="fname";__tgt2__="pnum")
+{
+为你找到了[fname]的团购，请问你是几个人吃？	1
+}
+
+MA:	offersplit(__tgt1__="all",slot1="all";__tgt2__="area",slot2="area")
+{
+找到了你要的团购，请问你要[area]的？	1
+}
+
+MA:	offersplit(__tgt1__="all",slot1="all";__tgt2__="seller",slot2="seller")
+{
+找到了你要的团购，请问你要[seller]的？	1
+}
+
+MA:	offersplit(__tgt1__="all",slot1="all";__tgt2__="pnum",slot2="pnum")
+{
+找到了你要的团购，请问你是要[pnum]吗？	1
+}
+
+MA:	offersplit(__tgt1__="all",slot1="all";__tgt2__="ftype",slot2="ftype")
+{
+找到了你要的团购，请问你要[ftype]？	1
+}
+
+MA:	offersplit(__tgt1__="all",slot1="all";__tgt2__="fname",slot2="fname")
+{
+找到了你要的团购，请问你要[fname]？	1
+}
+
+MA:	offersplit(__tgt1__="seller",slot1="seller";__tgt2__="area",slot2="area")
+{
+为你找到了[seller]的团购，请问你要[area]?	1
+}
+
+MA:	offersplit(__tgt1__="seller",slot1="seller";__tgt2__="pnum",slot2="pnum")
+{
+为你找到了[seller]的团购，请问你要[pnum]?	1
+}
+
+MA:	offersplit(__tgt1__="seller",slot1="seller";__tgt2__="ftype",slot2="ftype")
+{
+为你找到了[seller]的团购，请问你要[ftype]?	1
+}
+
+MA:	offersplit(__tgt1__="seller",slot1="seller";__tgt2__="fname",slot2="fname")
+{
+为你找到了[seller]的团购，请问你要[fname]?	1
+}
+
+MA:	offersplit(__tgt1__="pnum",slot1="pnum";__tgt2__="area",slot2="area")
+{
+为你找到了[pnum]人套餐,请问你是要[area]?	1
+}
+
+MA:	offersplit(__tgt1__="pnum",slot1="pnum";__tgt2__="seller",slot2="seller")
+{
+为你找到了[pnum]人套餐,请问你是要[seller]?	1
+}
+
+MA:	offersplit(__tgt1__="pnum",slot1="pnum";__tgt2__="ftype",slot2="ftype")
+{
+为你找到了[pnum]人套餐,请问你是要[ftype]?	1
+}
+
+MA:	offersplit(__tgt1__="pnum",slot1="pnum";__tgt2__="fname",slot2="fname")
+{
+为你找到了[pnum]人套餐,请问你是要[fname]?	1
+}
+
+MA:	offersplit(__tgt1__="promise",slot1="promise";__tgt2__="area",slot2="area")
+{
+为你找到了[promise]的团购，请问你是要[area]?	1
+}
+
+# offersplit(__tgt1__="promise",slot1="promise";__tgt2__="seller",slot2="seller")
+# {
+# 为你找到了[promise]的团购，请问你是要[seller]?	 1
+# }
+
+MA:	offersplit(__tgt1__="promise",slot1="promise";__tgt2__="pnum",slot2="pnum")
+{
+为你找到了[promise]的团购，请问你是要[pnum]?	1
+}
+
+MA:	offersplit(__tgt1__="promise",slot1="promise";__tgt2__="ftype",slot2="ftype")
+{
+为你找到了[promise]的团购，请问你是要[ftype]?	1
+}
+
+MA:	offersplit(__tgt1__="promise",slot1="promise";__tgt2__="fname",slot2="fname")
+{
+为你找到了[promise]的团购，请问你是要[fname]?	1
+}
+
+MA:	offersplit(__tgt1__="ftype",slot1="ftype";__tgt2__="area",slot2="area")
+{
+为你找到了[ftype]团购，请问你是要[area]?	1
+}
+
+MA:	offersplit(__tgt1__="ftype",slot1="ftype";__tgt2__="seller",slot2="seller")
+{
+为你找到了[ftype]团购，请问你是要[seller]?	1
+}
+
+MA:	offersplit(__tgt1__="ftype",slot1="ftype";__tgt2__="pnum",slot2="pnum")
+{
+为你找到了[ftype]团购，请问你是要[pnum]?	1
+}
+
+MA:	offersplit(__tgt1__="ftype",slot1="ftype";__tgt2__="fname",slot2="fname")
+{
+为你找到了[ftype]团购，请问你是要[fname]?	1
+}
+
+MA:	offersplit(__tgt1__="fname",slot1="fname";__tgt2__="area",slot2="area")
+{
+为你找到了[fname]团购，请问你要[area]?	1
+}
+
+MA:	offersplit(__tgt1__="fname",slot1="fname";__tgt2__="seller",slot2="seller")
+{
+为你找到了[fname]团购，请问你要[seller]?	1
+}
+
+MA:	offersplit(__tgt1__="fname",slot1="fname";__tgt2__="pnum",slot2="pnum")
+{
+为你找到了[fname]团购，请问你要[pnum]?	1
+}
+
+MA:	offersplit(__tgt1__="fname",slot1="fname";__tgt2__="ftype",slot2="ftype")
+{
+为你找到了[fname]团购，请问你要[ftype]?	1
+}
+
+MA:	offer(__tgt1__="all",slot1="all")
+{
+为你找到如下[all]	1
+}
+
+MA:	offer(__tgt1__="seller",slot1="seller")
+{
+为你找到了如下[seller]的团购	1
+}
+
+MA:	offer(__tgt1__="pnum",slot1="pnum")
+{
+为你找到了如下的[pnum]人套餐 	1
+}
+
+MA:	offer(__tgt1__="promise",slot1="promise")
+{
+为你找到了如下[promise]的团购	1
+}
+
+MA:	offer(__tgt1__="ftype",slot1="ftype")
+{
+为你找到了如下[ftype]团购	1
+}
+
+MA:	offer(__tgt1__="fname",slot1="fname")
+{
+为你找到了如下[fname]的团购	1
+}
+
+MA:	recomplain()
+{
+话说打是情,骂是爱,莫非,你对我有意思？
+哎呀呀,人家也才刚刚出道,多多体谅一下下嘛.
+哎呀,今天天气不错,挺风和日丽的.	1
+}
+
+MA:	rehelp()
+{
+我能帮你找个各种美食团购，想吃什么，尽管说出来吧	1
+}
+
+MA:	repeat()
+{
+能把音量调高点不,这么细声细气,听不清的啦	1
+}
+
+MA:	request(__tgt1__="price")
+{
+请问你想要什么价位的呢	1
+请问你觉得什么价位的比较OK	1
+}
+
+MA:	request(__tgt1__="taste")
+{
+请问你想要吃什么口味的呢	1
+请问你想吃什么口味的，甜的，辣的，还是清淡点的	1
+请问你口味有什么偏好么	1
+}
+
+MA:	request(__tgt1__="pnum")
+{
+请问你是几个人一起 	1
+请问你们几个人吃饭	1
+请问你们有多少人	1
+}
+
+MA:	request(__tgt1__="ftype")
+{
+请问你想要吃什么呢，湘菜，火锅还是甜点	1
+我这吃的老多了，请问你是要吃什么烤鱼呢，还是甜点呢，还是其它的什么呢	1
+}
+
+MA:	request(__tgt1__="fname")
+{
+请问你有没有比较想吃的菜	1
+请问你想吃哪道菜呢	1
+}
+
+MA:	restart()
+{
+好的，让我们重新开始吧。	1
+一切归零，重新开始	1
+团若在，亲就在，让我们从头再来	1
+}
+
+MA:	split(__tgt1__="area",slot1="area")
+{
+请问你是要[area]?	 1
+}
+
+MA:	split(__tgt1__="seller",slot1="seller")
+{
+请问你是要[seller]?	1
+}
+
+MA:	split(__tgt1__="pnum",slot1="pnum")
+{
+请问你是要[pnum]?	1
+}
+
+MA:	split(__tgt1__="ftype",slot1="ftype")
+{
+请问你是要[ftype]?	1
+}
+
+MA:	split(__tgt1__="fname",slot1="fname")
+{
+请问你想吃[fname]?	1
+}
+
+MA:	thanks()
+{
+哎呀，这么说人家，多不好意思的	1
+哎哟，不错哦，又有人夸奖俺了，嘿嘿嘿	1
+}
+
+MA:	inform(__tgt1__="seller",slot1="seller")
+{
+为你找到了如下几家好吃的	1
+}
+
+MA:	inform(__tgt1__="vote",slot1="vote")
+{
+你可以猛戳每个团单，就可以进入网页查看评论，不过，俺偷偷地告诉你，他的评分是[vote]哦，亲	1
+}

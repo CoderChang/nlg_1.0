@@ -1,0 +1,233 @@
+########################
+系统动作
+########################
+request(a)
+request(a,b=x,...)	<-->	request(a) inform(b=x,...)
+confirm(a=x,...)	<-->	confirm(a=x) ...
+confreq(a=x,..,c=z,d)	<-->	confirm(a=x) ... confirm(c=z) request(d)
+inform(a=x,...)	<-->	inform(a=x) ...
+split(a=x,...,c=x)	<-->	split(a=x) ... split(c=x)
+split(a=x,...,c=x,d=y,...)	<-->	split(a=x) ... split(c=x) inform(d=y) ...
+##### findalt(name=x,b=y,...,c=x,d=dontcare)	<-->	offer(name=x,b=y,...,c=z) inform(d=dontcare)	###### 根据其意思，findalt改为OfferAlt可能更合理 #######
+QueryMore()
+QureyMore(a=dontcare)	
+bye()
+offer(name=x,b=y,...)	<-->	offer(name=x) inform(b=y) ...
+OfferConf(name=x,b=y,...,c=z,d=w)	<-->	offer(name=x,b=y,...,c=z) confirm(d=w)
+OfferSelect(name=x,b=y,...,c=z,d=w,...,d=u)	<-->	offer(name=x,b=y,...,c=z) select(d=w,...,d=u)    ######## 对应小oh中的offersplit #########
+OfferReq(name=x,b=y,...,c=z,d)	<-->	offer(name=x,b=y,...,c=z) request(d)
+OfferAlt(name=x,b=y,...,c=x,d=dontcare)	<-->	offer(name=x,b=y,...,c=z) inform(d=dontcare)
+InformConf(a=x,...,b=y,c=z,...,d=u)	<-->	inform(a=x,...,b=y) ... confirm(c=z,...,d=u)
+Hello()
+askrepeat()
+restart()
+hangup()
+BackChn()
+Help()	############在什么情况下，系统向用户求助################
+affirm()
+Affirm(a=x,...)	<-->	affirm() inform(a=x) ...
+negate()
+Negate(a=x,b=y,...)	<-->	negate() inform(a=x) ...
+Deny(a=x,b=y,...)	<-->	deny(a=x) inform(b=y) ...
+OK()
+ReComplain()
+Thanks()
+Unsupport()
+ConfRestart()
+ReHelp()
+select(a=x,...,a=y)	<-->	select(a=x) ...	select(a=y)
+
+对应的DSTC数据格式（可参考log.json中的“dialog-acts”字段）：
+例如：
+系统动作为 request（a,b=x)	<-->	request(a) inform(b=x)
+对应的DSTC数据格式：
+[
+      {
+             "slots": [
+                 [
+                   "slot",  #### 当动作为request的时候的默认填充字段 ####
+                   "a"
+                 ]
+              ], 
+             "act": "request"
+       }, 
+       {
+             "slots": [
+                 [
+                   "b", 
+                   "x"
+                 ]
+              ], 
+             "act": "inform"
+       }, 
+]
+系统动作为 hello（）
+对应的DSTC数据格式：
+[
+      {
+             "slots": [
+              ], 
+             "act": "hello"
+       }
+]
+
+
+
+####### 小OH参考sys动作 ##########
+Greet		0	0	Greet()	0												//system向user问候
+Request		1	1	Request(__tgt1__,slotlist1)	1							//system向user要求信息或结果
+ConfReq		2	2	ConfReq(__tgt1__,slotlist1,__tgt2__,slotlist2)	1		//system向user确认(是与否确认)并要求更多信息或者结果
+Confirm		3	1	Confirm(__tgt1__,slotlist1)	1							//system向user确认
+Offer		4	1	Offer(__tgt1__,slotlist1)	1	    					//X
+Inform		5	1	Inform(__tgt1__,slotlist1)	1							//system向user提供信息
+Split		6	1	Split(__tgt1__,slotlist1)	1		 	 				//X
+FindAlt		7	0	FindAlt()	1											//system向user放松条件，给出相关结果
+QueryMore	8	1	QueryMore(__tgt1__,slotlist1)	1	    	   			//system向user询问是否需要更多的服务
+Bye			9	0	Bye()	1													//system向user用语言说Bye
+OfferConf	10	2	OfferConf(__tgt1__,slotlist1,__tgt2__,slotlist2)	1	//system向user给出结果，并确认
+OfferSplit	11	2	OfferSplit(__tgt1__,slotlist1,__tgt2__,slotlist2)	1	//system向user给出两个或者多个结果，请用户选择
+InformConf	12	2	OfferConf(__tgt1__,slotlist1,__tgt2__,slotlist2)	1	//system向user给出信息并确认
+OfferReq	13	2	OfferReq(__tgt1__,slotlist1,__tgt2__,slotlist2) 	1 	//system向user给出结果，并询问更多信息
+Hello		14	0	Hello()	1								     			//system向user say hello
+Silence		15	0	Silence()	0	   										//user keeps silence
+AskRepeat	16	0	AskRepeat()	1			   								//system向user要求对方重复
+Restart		17	0	Restart()	1						   					//system向user要求对方重新开始
+HangUp		18	0	HangUp()	1											//system向user执行挂起，作为对user hangup动作的响应
+BakChn		19	0	BackChn()	1											//system向user说插入语“uh uh",“对了”、“嗯”、“好”、“得了”、“哇”、“哦”，“真的？”，“阿！”
+Help		20	1	Help(__tgt1__,slotlist1)	1							//system向user求助
+Complain	21	0	Complain()	0											//X
+Ack			22	0	Ack()	0												//system向user肯定，如：“你还不错哦”，“你挺牛的“，“牛X”等
+Affirm		23	1	Affirm(__tgt1__,slotlist1)	1							//system肯定user的问题，是的，对的，喜欢
+Negate		24	1	Negate(__tgt1__,slotlist1)	1							//system否定user的问题，并给出正确答案不要； 我不要刘德华的，我要周润发的
+Deny		25	0	Deny()	1												//system否定user的问题我不要刘德华的  
+OK			26	1	OK(__tgt1__,slotlist1)	1									//system去执行用户选择的task动作,不是对话动作
+ReComplain	27	0	ReComplain()	1										//system响应user的complain动作
+Thanks		28	0	Thanks()	1											//system向user表示感谢
+Null		29	0	Null()	0												//X
+Repeat		30	0	Repeat()	1											//machine repeat last action
+Unsupport	31	0	Unsupport()	1											//machine 对usr的说法暂不支持
+ConfRestart	32	0	ConfRestart()	1										//machine 向usr的确认是否重新开始
+ReHelp		33	1	ReHelp(__tgt1__,slotlist1)	1							//machine 响应usr的help
+
+
+
+
+###########################
+用户动作
+###########################
+hello()	0
+hello(a=x,...)	2	<-->	hello() inform(a=x,...)
+silence()	0
+ok()	0
+null()	0
+AskRepeat()	0
+bye()	0
+restart()	0
+hangup()	0
+BakChn()	0
+Complain()	0
+ack()	0
+thanks()	0
+request(a)	1
+request(a,b=x,...)	3	->	request(a) inform(b=x,...)
+confirm(a=x,...)	2	->	confirm(a=x) confirm(b=y) ...
+inform(a=x,...)	2	->	inform(a=x) inform(b=y)	...
+findalts()	0
+findalts(a=x,...)	2	->	findalts() inform(a=x,...)
+findalts(a=dontcare,...)	2	->	findalts() inform(a=dontcare,...)
+help()	0
+help(a,...)	4	->	help(a)	help(b)	...
+affirm()	0
+affirm(a=x,...)	2	->	affirm() inform(a=x,...)
+negate()	0	
+negate(a=x)	5	->	negate() inform(a=x)
+negate(a=x,b=y,...)	2	->	negate() inform(a=x)	inform(b=y,...)
+deny(a=x,b=y,...)	2	->	deny(a=x) inform(b=y,...)
+QueryMore()	0
+Querymore(a=x,...)	2	->	QueryMore() inform(a=x,...)
+ConfRestart()
+ReHelp()
+
+
+对应的DSTC数据格式（可参考log.json中的“slu-hyps”字段）：
+例如：
+系统动作为 
+request（a,b=x)  0.8
+reuqest（a）0.2
+对应的DSTC数据格式：
+[
+                        {
+                            "slu-hyp": [
+                                {
+                                    "slots": [
+                                        [
+                                            "slot", 
+                                            "a"
+                                        ]
+                                    ], 
+                                    "act": "request"
+                                }, 
+                                {
+                                    "slots": [
+                                        [
+                                            "b", 
+                                            "x"
+                                        ]
+                                    ], 
+                                    "act": "inform"
+                                }
+                            ], 
+                            "score": 0.8
+                        }, 
+                        {
+                            "slu-hyp": [
+                                {
+                                    "slots": [
+                                        [
+                                            "slot", 
+                                            "a"
+                                        ]
+                                    ], 
+                                    "act": "request"
+                                }
+                            ], 
+                            "score": 0.2
+                        }
+]
+
+
+##### 小oh用户动作参考 #########
+Greet		0	0	Greet()	0												//user向system问候
+Request		1	1	Request(__tgt1__,slotlist1)	1							//user向system要求信息或结果
+ConfReq 	2	2	ConfReq(__tgt1__,slotlist1,__tgt2__,slotlist2)	0	  	//user向system确认(是与否确认)并要求更多信息或者结果
+Confirm 	3	1	Confirm(__tgt1__,slotlist1)	1							//user向system确认
+Offer		4	1	Offer(__tgt1__,slotlist1)	0		    				//X
+Inform		5	1	Inform(__tgt1__,slotlist1)	1							//user向system提供信息
+Split 		6	1	Split(__tgt1__,slotlist1)	0			 	 			//X
+FindAlt 	7	0	FindAlt()	1											//user向system要求提供更多的结果
+QueryMore 	8	0	QueryMore(__tgt1__,slotlist1)	0		    	   		//X
+Bye		9	0	Bye()	1													//user向system用语言说Bye
+OfferConf 	10	2	OfferConf(__tgt1__,slotlist1,__tgt2__,slotlist2)	0	//X
+OfferSplit 	11	2	OfferSplit(__tgt1__,slotlist1,__tgt2__,slotlist2)	0	//X
+InformConf 	12	2	OfferConf(__tgt1__,slotlist1,__tgt2__,slotlist2)	0	//user向system给出信息并确认
+OfferReq 	13	2	OfferReq(__tgt1__,slotlist1,__tgt2__,slotlist2)	0	  	//X
+Hello 		14	0	Hello()	1								     			//user向system say hello
+Silence 	15	0	Silence()	1						   					//user keeps silence
+AskRepeat 	16	0	AskRepeat	1						   					//user向system要求对方重复
+Restart		17	0	Restart()	1						   					//user向system要求对方重新开始
+HangUp		18	0	HangUp()	1											//user向system挂起，该动作区分与Silence在于，user明确告知system需要挂起，如U：“对不起，让我想想“，”稍等我一下“
+BakChn		19	0	BackChn()	1											//user向system仅说了插入语“uh uh",“对了”、“嗯”、“好”、“得了”、“哇”、“哦”，“真的？”，“阿！”
+Help		20	1	Help(__tgt1__,slotlist1)	1							//user向system求助，如：”我不知道“，“我不知道有些类型”，“我不知有哪些演员”，
+Complain 	21	0	Complain()	1											//user向system抱怨，如：“你太烂了”，“你好差劲”
+Ack 		22	0	Ack()	1												//user向system肯定，如：“你还不错哦”，“你挺牛的“，“牛X”等
+Affirm		23	1	Affirm(__tgt1__,slotlist1)	1							//user肯定system的问题是的，对的，喜欢
+Negate 		24	2	Negate(__tgt1__,slotlist1,__tgt2__,__slotlist2__)	1	//user否定system的问题，并给出正确答案不要； 我不要刘德华的，我要周润发的
+Deny		25	1	Deny()	1												//user否定system的问题我不要刘德华的  
+OK 		26	1	OK(__tgt1__,slotlist1)	0									//X
+ReComplain	27	0	ReComplain()	0										//X
+Thanks 		28	0	Thanks()	0											//X
+Null		29	0	Null()	1												//user向system所说的内容没有解析出任何内容
+Repeat		30	0	Repeat()	0											//X
+Unsupport	31	0	Unsupport()	0											//X
+ConfRestart	32	0	ConfRestart()	1										//X
+ReHelp		33	1	ReHelp(__tgt1__,slotlist1)	1							//X

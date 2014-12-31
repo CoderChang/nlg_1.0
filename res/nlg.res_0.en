@@ -1,0 +1,1508 @@
+MA:	request(__tgt1__=time_show)
+{
+你要大概什么时间的?	1
+你要看什么时候的电影?	1
+}
+
+MA:	request(__tgt1__=type)
+{
+你喜欢什么类型的影片?	1
+}
+	
+MA:	request(__tgt1__=actor)
+{
+你喜欢哪个演员?	1
+你喜欢看谁演的?	1
+你喜欢谁演的电影?	1
+你对演员有什么样的喜好?	1
+你想看哪个演员的电影?	1
+}
+
+MA:	request(__tgt1__=director)
+{
+你喜欢哪个导演?	1
+你喜欢看谁导演的?	1
+你喜欢谁导演的电影?	1
+你对导演有什么样的喜好?	1
+}
+	
+MA:	request(__tgt1__=nation)
+{
+你喜欢哪个国家的?	1
+你想看哪个国家的电影?	1
+你想看哪个地区的电影?	1
+你要看哪个国家的电影?	1
+你喜欢哪个国家的?	1
+}
+
+MA:	request(__tgt1__=subaward)
+{
+您要查看哪个奖项?	1
+}
+
+MA:	request(__tgt1__=time_award)
+{
+您要找什么时间的奖项电影?	1
+}
+
+MA:	confreq(__tgt1__=nation,slot1=nation;__tgt2__=actor)
+{
+你要看[nation]的谁主演的影片？	1
+}
+
+MA:	confreq(__tgt1__=nation,slot1=nation;__tgt2__=time_show)
+{
+你要看[nation]什么时候的影片？	1
+}
+
+MA:	confreq(__tgt1__=nation,slot1=nation;__tgt2__=time_award)
+{
+你要看[nation]什么时间的获奖影片？	1
+}
+
+MA:	confreq(__tgt1__=nation,slot1=nation;__tgt2__=type)
+{
+你要看[nation]什么类型片？	1
+}
+
+MA:	confreq(__tgt1__=nation,slot1=nation;__tgt2__=subaward)
+{
+你要看[nation]获得哪种奖项的影片？	1
+}
+
+MA:	confreq(__tgt1__=time_show,slot1=time_show;__tgt2__=actor)
+{
+你要看[time_show]谁主演的影片？	1
+}
+
+MA:	confreq(__tgt1__=time_show,slot1=time_show;__tgt2__=nation)
+{
+你要看[time_show]哪个国家的电影？	1
+}
+
+MA:	confreq(__tgt1__=time_show,slot1=time_show;__tgt2__=time_award)
+{
+你要看[time_show]什么时间的获奖影片？	1
+}
+
+MA:	confreq(__tgt1__=time_show,slot1=time_show;__tgt2__=type)
+{
+你要看[time_show]什么类型片？	1
+}
+
+MA:	confreq(__tgt1__=time_show,slot1=time_show;__tgt2__=subaward)
+{
+你要看[time_show]获得哪种奖项的影片？	1
+}
+
+MA:	confreq(__tgt1__=award,slot1=award;__tgt2__=actor)
+{
+你想看谁主演的获[award]的影片？	1
+}
+
+MA:	confreq(__tgt1__=award,slot1=award;__tgt2__=nation)
+{
+你要看获[award]奖的哪个国家的电影？	1
+}
+
+MA:	confreq(__tgt1__=award,slot1=award;__tgt2__=time_show)
+{
+你要看什么时间获[award]奖的影片？	1
+}
+
+MA:	confreq(__tgt1__=award,slot1=award;__tgt2__=time_award)
+{
+你要看什么时间获[award]奖的影片？	1
+}
+
+MA:	confreq(__tgt1__=award,slot1=award;__tgt2__=type)
+{
+你想看什么类型的[award]奖影片？	1
+}
+
+MA:	confreq(__tgt1__=award,slot1=award;__tgt2__=subaward)
+{
+你要看获[award]哪种奖项的影片？	1
+}
+
+MA:	confreq(__tgt1__=len,slot1=len;__tgt2__=actor)
+{
+你想看谁主演的片长[len]的影片？	1
+}
+
+MA:	confreq(__tgt1__=len,slot1=len;__tgt2__=nation)
+{
+你要看哪个国家片长[len]的电影？	1
+}
+
+MA:	confreq(__tgt1__=len,slot1=len;__tgt2__=time_award)
+{
+你要看什么年代片长[len]的影片？	1
+}
+
+MA:	confreq(__tgt1__=len,slot1=len;__tgt2__=time_show)
+{
+你要看什么年代片长[len]的影片？	1
+}
+
+MA:	confreq(__tgt1__=len,slot1=len;__tgt2__=type)
+{
+你想看什么类型片长[len]奖影片？	1
+}
+
+MA:	confreq(__tgt1__=len,slot1=len;__tgt2__=subaward)
+{
+你要看片长[len]的获得哪种奖项的影片？	1
+}
+
+MA:	confreq(__tgt1__=lang,slot1=lang;__tgt2__=actor)
+{
+你想看谁主演的[lang]片？	1
+}
+
+MA:	confreq(__tgt1__=lang,slot1=lang;__tgt2__=nation)
+{
+你要看哪个国家[lang]片？	1
+}
+
+MA:	confreq(__tgt1__=lang,slot1=lang;__tgt2__=time_award)
+{
+你要看什么时期的[lang]片？	1
+}
+
+MA:	confreq(__tgt1__=lang,slot1=lang;__tgt2__=time_show)
+{
+你要看什么年代[lang]片？	1
+}
+
+MA:	confreq(__tgt1__=lang,slot1=lang;__tgt2__=type)
+{
+你想看什么类型的[lang]片？	1
+}
+
+MA:	confreq(__tgt1__=lang,slot1=lang;__tgt2__=subaward)
+{
+你要看获得哪种奖项的[lang]片？	1
+}
+
+MA:	confreq(__tgt1__=cost,slot1=cost;__tgt2__=actor)
+{
+你想看谁主演的制作成本[cost]的影片？	1
+}
+
+MA:	confreq(__tgt1__=cost,slot1=cost;__tgt2__=nation)
+{
+你要看哪个国家制作成本[cost]的影片？	1
+}
+
+MA:	confreq(__tgt1__=cost,slot1=cost;__tgt2__=time_award)
+{
+你要看什么时期制作成本[cost]的影片？	1
+}
+
+MA:	confreq(__tgt1__=cost,slot1=cost;__tgt2__=time_show)
+{
+你要看什么年代制作成本[cost]的影片？	1
+}
+
+MA:	confreq(__tgt1__=cost,slot1=cost;__tgt2__=type)
+{
+你想看什么类型制作成本[cost]的影片？	1
+}
+
+MA:	confreq(__tgt1__=cost,slot1=cost;__tgt2__=subaward)
+{
+你要看获得哪种奖项的制作成本[cost]的影片？	1
+}
+
+MA:	confreq(__tgt1__=subaward,slot1=subaward;__tgt2__=actor)
+{
+你想看谁演的获得[subaward]奖的影片？	1
+}
+
+MA:	confreq(__tgt1__=subaward,slot1=subaward;__tgt2__=nation)
+{
+你要看哪个国家的获得[subaward]奖的影片？	1
+}
+
+MA:	confreq(__tgt1__=subaward,slot1=subaward;__tgt2__=time_award)
+{
+你要看什么时期获得[subaward]奖的影片？	1
+}
+
+MA:	confreq(__tgt1__=subaward,slot1=subaward;__tgt2__=time_show)
+{
+你要看什么年代获得[subaward]奖的影片？	1
+}
+
+MA:	confreq(__tgt1__=subaward,slot1=subaward;__tgt2__=type)
+{
+你想看什么类型获得[subaward]奖的影片？	1
+}
+
+MA:	confreq(__tgt1__=mhuman,slot1=mhuman;__tgt2__=time_award)
+{
+你要看什么时期[mhuman]的电影？	1
+}
+
+MA:	confreq(__tgt1__=mhuman,slot1=mhuman;__tgt2__=time_show)
+{
+你要看什么年代[mhuman]的电影？	1
+}
+
+MA:	confreq(__tgt1__=mhuman,slot1=mhuman;__tgt2__=type)
+{
+你想看什么类型[mhuman]的电影？	1
+}
+
+MA:	confreq(__tgt1__=mhuman,slot1=mhuman;__tgt2__=subaward)
+{
+你要看获得哪种奖项的[mhuman]的电影？	1
+}
+
+MA:	confreq(__tgt1__=mhuman,slot1=mhuman;__tgt2__=nation)
+{
+你要看哪个国家的[mhuman]的电影？	1
+}
+
+MA:	confreq(__tgt1__=type,slot1=type;__tgt2__=actor)
+{
+你想看谁演的[type]片？	1
+}
+
+MA:	confreq(__tgt1__=type,slot1=type;__tgt2__=nation)
+{
+你要看哪个国家[type]片？	1
+}
+
+MA:	confreq(__tgt1__=type,slot1=type;__tgt2__=time_award)
+{
+你要看什么时期[type]片？	1
+}
+
+MA:	confreq(__tgt1__=type,slot1=type;__tgt2__=time_show)
+{
+你要看什么年代[type]片？	1
+}
+
+MA:	confreq(__tgt1__=type,slot1=type;__tgt2__=subaward)
+{
+你要看获得哪种奖项[type]片？	1
+}
+
+MA:	confreq(__tgt1__=company,slot1=company;__tgt2__=actor)
+{
+你想看[company]谁演的电影？	1
+}
+
+MA:	confreq(__tgt1__=company,slot1=company;__tgt2__=time_award)
+{
+你要看什么时期[company]电影？	1
+}
+
+MA:	confreq(__tgt1__=company,slot1=company;__tgt2__=time_show)
+{
+你要看什么年代[company]电影？	1
+}
+
+MA:	confreq(__tgt1__=company,slot1=company;__tgt2__=type)
+{
+你想看什么类型[company]电影？	1
+}
+
+MA:	confreq(__tgt1__=company,slot1=company;__tgt2__=subaward)
+{
+你要看获得哪种奖项[company]电影？	1
+}
+
+MA:	confreq(__tgt1__=name,slot1=name;__tgt2__=actor)
+{
+你想看谁演的[name]？	1
+}
+
+MA:	confreq(__tgt1__=name,slot1=name;__tgt2__=nation)
+{
+你要看哪个国家[name]？	1
+}
+
+MA:	confreq(__tgt1__=name,slot1=name;__tgt2__=time_award)
+{
+你要看什么时期的[name]？	1
+}
+
+MA:	confreq(__tgt1__=name,slot1=name;__tgt2__=time_show)
+{
+你要看什么年代的[name]？	1
+}
+
+MA:	confreq(__tgt1__=name,slot1=name;__tgt2__=type)
+{
+你想看什么类型的[name]？	1
+}
+
+MA:	confreq(__tgt1__=name,slot1=name;__tgt2__=subaward)
+{
+你要看获得哪种奖项的[name]？	1
+}
+
+MA:	confreq(__tgt1__=actor,slot1=actor;__tgt2__=time_award)
+{
+你要看什么时期[actor]演的影片？	1
+}
+
+MA:	confreq(__tgt1__=actor,slot1=actor;__tgt2__=nation)
+{
+你要看[actor]演的什么国家的影片？	1
+}
+
+MA:	confreq(__tgt1__=actor,slot1=actor;__tgt2__=time_show)
+{
+你要看什么年代[actor]演的影片？	1
+}
+
+MA:	confreq(__tgt1__=actor,slot1=actor;__tgt2__=type)
+{
+你想看[actor]演的什么类型的影片？	1
+}
+
+MA:	confreq(__tgt1__=actor,slot1=actor;__tgt2__=subaward)
+{
+你要看获得哪种奖项的[actor]影片？	1
+}
+
+MA:	confreq(__tgt1__=director,slot1=director;__tgt2__=actor)
+{
+你想看[director]导演的哪位主演的影片？	1
+}
+
+MA:	confreq(__tgt1__=director,slot1=director;__tgt2__=nation)
+{
+你要看[director]导的哪个国家的影片？	1
+}
+
+MA:	confreq(__tgt1__=director,slot1=director;__tgt2__=time_award)
+{
+你要看什么时期[director]导的影片？	1
+}
+
+MA:	confreq(__tgt1__=director,slot1=director;__tgt2__=time_show)
+{
+你要看什么年代[director]导的影片？	1
+}
+
+MA:	confreq(__tgt1__=director,slot1=director;__tgt2__=type)
+{
+你想看[director]导的什么类型的影片？	1
+}
+
+MA:	confreq(__tgt1__=director,slot1=director;__tgt2__=subaward)
+{
+你要看获得哪种奖项的[director]导演的影片？	1
+}
+
+MA:	confreq(__tgt1__=editor,slot1=editor;__tgt2__=actor)
+{
+你想看[editor]编剧的哪位主演的影片？	1
+}
+
+MA:	confreq(__tgt1__=editor,slot1=editor;__tgt2__=nation)
+{
+你要看[editor]编的哪个国家的影片？	1
+}
+
+MA:	confreq(__tgt1__=editor,slot1=editor;__tgt2__=time_award)
+{
+你要看什么时期[editor]编剧的影片？	1
+}
+
+MA:	confreq(__tgt1__=editor,slot1=editor;__tgt2__=time_show)
+{
+你要看什么年代[editor]编剧的影片？	1
+}
+
+MA:	confreq(__tgt1__=editor,slot1=editor;__tgt2__=type)
+{
+你想看[editor]编剧的什么类型的影片？	1
+}
+
+MA:	confreq(__tgt1__=editor,slot1=editor;__tgt2__=subaward)
+{
+你要看获得哪种奖项的[editor]编剧的影片？	1
+}
+
+
+
+
+
+MA:	confirm(__tgt1__=actor,slot1=actor)
+{
+[actor]演的,你喜欢吗?	1.5
+你喜欢[actor]的电影吗?	3.1
+}
+	
+MA:	confirm(__tgt1__=cost,slot1=cost)
+{
+你是要找制作成本[cost]的电影吗?	1
+}
+	
+MA:	confirm(__tgt1__=len,slot1=len)
+{
+你确定要时长[len]的电影吗?	1
+你要找片长为[len]的电影吗?	1
+}
+	
+MA:	confirm(__tgt1__=mhuman,slot1=mhuman)
+{
+请问你是要找[mhuman]的电影吗?	1
+}
+	
+MA:	confirm(__tgt1__=company,slot1=company)
+{
+你是说[company]么?	1
+请问你是要找[company]的电影么?	1
+}
+	
+MA:	confirm(__tgt1__=name,slot1=name)
+{
+你是在找[name]?	1
+你是在找[name]吗?	1
+你是找[name]吗?	1
+你是要找[name]吗?	1
+你找的是[name]吗?	1
+来一部[name]怎么样?	1
+[name]你喜欢吗?	1
+[name]如何?	1
+[name]怎么样?	1
+你是找[name]吗?	1
+请问您是要找[name]么?	1
+}
+	
+MA:	confirm(__tgt1__=award,slot1=award)
+{
+您好,请问您是要找获得[award]的电影吗?	1
+}
+
+MA:	confirm(__tgt1__=subaward,slot1=subaward)
+{
+您好,请问您是要找获得[subaward]的电影吗?	1
+}
+	
+MA:	confirm(__tgt1__=relation::name,slot1=relation::name)
+{
+请问你是想要找和电影[name]相似的电影吗?	1
+请问你是想要找和[name]类似的电影吗?	1
+}
+	
+MA:	confirm(__tgt1__=type,slot1=type)
+{
+你喜欢[type]片吗?	1
+[type]片可以吗?	1
+[type]片可以吗?	1
+你喜欢看[type]片吗?	1
+[type]片怎么样?	1
+}
+	
+MA:	confirm(__tgt1__=lang,slot1=lang)
+{
+你确信只要[lang]的电影吗?	1
+}
+
+MA:	confirm(__tgt1__=time_show,slot1=time_show)
+{
+[time_show]上映的怎么样?	1
+}
+
+MA:	confirm(__tgt1__=nation,slot1=nation)
+{
+[nation]电影怎么样?	1
+要不要看看[nation]电影?	1
+}
+
+MA:	confirm(__tgt1__=nation::time_show,slot1=nation::time_show)
+{
+要不要看看[time_show]上映的[nation]电影?	1
+}
+
+MA:	confirm(__tgt1__=type::time_show,slot1=type::time_show)
+{
+要不要看看[time_show]上映的[type]电影?	1
+}
+
+MA:	confirm(__tgt1__=type::actor,slot1=type::actor)
+{
+要不要看看[actor]演的[type]片?	1
+[actor]的[type]电影，怎么样，有木有兴趣?	1
+}
+
+MA:	confirm(__tgt1__=type::nation,slot1=type::nation)
+{
+要不要看看[nation]的[type]片?	1
+}
+
+MA:	confirm(__tgt1__=director,slot1=director)
+{
+要不要看看[director]导演的影片?	1
+}
+
+MA:	confirm(__tgt1__=editor,slot1=editor)
+{
+要不要看看[editor]编辑的影片?	1
+}
+
+MA:	confirm(__tgt1__=all,slot1=all)
+{
+你确信是要找[all]的电影吗？	1
+}
+
+MA:	offer(__tgt1__=score_val,slot1=score_val)
+{
+为你找到了[score_val]的一些影片，你喜欢吗？	1
+}
+
+MA:	offer(__tgt1__=time_show,slot1=time_show)
+{
+为你找到了[time_show]的一些影片，你喜欢吗？	1
+}
+
+MA:	offer(__tgt1__=time_award,slot1=time_award)
+{
+为你找到了[time_award]的一些获奖影片，你喜欢吗？	1
+}
+
+MA:	offer(__tgt1__=vote_val,slot1=vote_val)
+{
+为你找到了[vote_val]的一些影片，希望你喜欢。	1
+}
+
+MA:	offer(__tgt1__=all,slot1=all)
+{
+为你找到了[all]。	1
+}
+
+MA: inform(slot1=db_status)
+{
+[db_status]	1
+}
+
+MA: inform(__tgt1__=name,slot1=name)
+{
+[name]	1
+}
+
+MA: inform(__tgt1__=type,slot1=type)
+{
+[type]	1
+}
+
+MA: inform(__tgt1__=actor,slot1=actor)
+{
+[actor]	1
+}
+
+MA: inform(__tgt1__=director,slot1=director)
+{
+[director]	1
+}
+
+MA: inform(__tgt1__=editor,slot1=editor)
+{
+[editor]	1
+}
+
+MA: inform(__tgt1__=production,slot1=production)
+{
+[production]	1
+}
+
+MA: inform(__tgt1__=issuer,slot1=issuer)
+{
+[issuer]	1
+}
+
+MA: inform(__tgt1__=time_cam,slot1=time_cam)
+{
+[time_cam]	1
+}
+
+MA: inform(__tgt1__=time_show,slot1=time_show)
+{
+[time_show]	1
+}
+
+MA: inform(__tgt1__=award,slot1=award)
+{
+[award]	1
+}
+
+MA: inform(__tgt1__=subaward,slot1=subaward)
+{
+[subaward]	1
+}
+
+MA: inform(__tgt1__=time_award,slot1=time_award)
+{
+[time_award]	1
+}
+
+MA: inform(__tgt1__=score_val,slot1=score_val)
+{
+[score_val]	1
+}
+
+MA: inform(__tgt1__=vote_val,slot1=vote_val)
+{
+[vote_val]	1
+}
+
+MA: inform(__tgt1__=nation,slot1=nation)
+{
+[nation]	1
+}
+
+MA: inform(__tgt1__=lang,slot1=lang)
+{
+[lang]	1
+}
+
+MA: inform(__tgt1__=cost,slot1=cost)
+{
+[cost]	1
+}
+
+MA: inform(__tgt1__=len,slot1=len)
+{
+[len]	1
+}
+
+MA: inform(__tgt1__=color,slot1=color)
+{
+[color]	1
+}
+
+MA: inform(__tgt1__=tag,slot1=tag)
+{
+[tag]	1
+}
+
+MA: inform(__tgt1__=bot,slot1=bot)
+{
+[bot]	1
+}
+
+MA: inform(__tgt1__=crowd,slot1=crowd)
+{
+[crowd]	1
+}
+
+MA: inform(__tgt1__=score_name,slot1=score_name::score_val)
+{
+[score_val]	1
+}
+
+MA: inform(__tgt1__=vote_name,slot1=vote_name::vote_val)
+{
+[vote_val]	1
+}
+
+MA: split(__tgt1__=mhuman,slot1=actor::director::editor)
+{
+你是想找[actor]主演的，还是[director]导演的，还是[editor]编剧的电影？
+}
+
+MA: split(__tgt1__=time,slot1=time_cam::time_show)
+{
+你是想找[time_cam]拍摄的，还是[time_show]上映的电影？
+}
+
+MA: split(__tgt1__=company,slot1=production::issuer)
+{
+你是想找[production]制作的，还是[issuer]发行的电影？
+}
+
+MA: split(__tgt1__=time_show,slot1=time_show)
+{
+你是想找[time_show]上演的电影？
+}
+MA: split(__tgt1__=actor,slot1=actor)
+{
+你是想找[actor]演的电影？
+}
+MA: split(__tgt1__=nation,slot1=nation)
+{
+你是想找[nation]的电影？
+}
+MA: split(__tgt1__=name,slot1=name)
+{
+你是想找[name]？
+}
+
+MA: findalt(__tgt1__=actor,slot1=actor)
+{
+放松了演员等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=time_show,slot1=time_show)
+{
+放松了上演时间等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=time_cam,slot1=time_cam)
+{
+放松了拍摄时间等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=time,slot1=time)
+{
+放松了时间等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=name,slot1=name)
+{
+放松了电影名等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=company,slot1=company)
+{
+放松了电影公司等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=type,slot1=type)
+{
+放松了类型等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=director,slot1=director)
+{
+放松了导演等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=editor,slot1=editor)
+{
+放松了编剧等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=mhuman,slot1=mhuman)
+{
+放松了电影人等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=award,slot1=award)
+{
+放松了电影奖等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=subaward,slot1=subaward)
+{
+放松了奖项等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=nation,slot1=nation)
+{
+放松了国家等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=lang,slot1=lang)
+{
+放松了语言等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=cost,slot1=cost)
+{
+放松了制作成本等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=color,slot1=color)
+{
+放松了彩色等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=len,slot1=len)
+{
+放松了片长等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=tag,slot1=tag)
+{
+放松了电影标签等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=score_val,slot1=score_val)
+{
+放松了评分等限制后，为你找到如下的电影。
+}
+MA: findalt(__tgt1__=vote_val,slot1=vote_val)
+{
+放松了投票次数等限制后，为你找到如下的电影。
+}
+
+MA: querymore(__tgt1__=operation)
+{
+您还有什么需要小OH可以服务？
+}
+
+MA:	offerconf(__tgt1__=score_val,slot1=score_val;__tgt2__=operation,slot2=operation)
+{
+找到了[score_val]的电影，请问是否需要为您[operation]?	1
+找到了[score_val]的电影，需要为您[operation]吗?
+}
+
+MA:	offerconf(__tgt1__=vote_val,slot1=vote_val;__tgt2__=operation,slot2=operation)
+{
+小OH为您找到了[vote_val]的电影，请问是否需要为您[operation]?	1
+小OH为您找到了[vote_val]的电影，需要为您[operation]吗?	1
+}
+
+MA:	offerconf(__tgt1__=all,slot1=all;__tgt2__=operation,slot2=operation)
+{
+小OH为您找到了[all]，请问是否需要为您[operation]?	1
+小OH为您找到了[all]，需要为您[operation]吗?	1
+}
+
+MA:	offerconf(__tgt1__=time_show,slot1=time_show;__tgt2__=operation,slot2=operation)
+{
+小OH为您找到了[time_show]上演的电影，请问是否需要为您[operation]?	1
+小OH为您找到了[time_show]上演的电影，需要为您[operation]吗?	1
+}
+
+MA:	offerconf(__tgt1__=time_show,slot1=time_show;__tgt2__=name,slot2=name)
+{
+小OH为您找到了[time_show]上演的电影，是你要的吗?	1
+小OH为您找到了[time_show]上演的电影，是你喜欢的吗?	1
+}
+
+MA:	offerconf(__tgt1__=all,slot1=all;__tgt2__=actor,slot2=actor)
+{
+小OH为您找到了[all]，请问您是否要[actor]的?	1
+小OH为您找到了[all]，请问您确信是要[actor]演的影片吗?	1
+}
+
+MA:	offerconf(__tgt1__=score_val,slot1=score_val;__tgt2__=name,slot2=name)
+{
+小OH为您找到了这部电影，是您要的吗?	1
+小OH为您找到了这部电影，是你喜欢的吗?	1
+}
+MA:	offerconf(__tgt1__=vote_val,slot1=vote_val;__tgt2__=name,slot2=name)
+{
+小OH为您找到了这部电影，是您要的吗?	1
+小OH为您找到了这部电影，是你喜欢的吗?	1
+}
+
+MA:	offerconf(__tgt1__=all,slot1=all;__tgt2__=name,slot2=name)
+{
+小OH为您找到了多部[all]，是您要的吗?	1
+小OH为您找到了多部[all]，是你喜欢的吗?	1
+}
+
+MA:	offerconf(__tgt1__=score_val,slot1=score_val;)
+{
+小OH为您找到了这部电影，是您要的吗?	1
+小OH为您找到了这部电影，是你喜欢的吗?	1
+}
+
+MA:	offerconf(__tgt1__=vote_val,slot1=vote_val;)
+{
+小OH为您找到了这部电影，是您要的吗?	1
+小OH为您找到了这部电影，是你喜欢的吗?	1
+}
+
+MA:	offerconf(__tgt1__=all,slot1=all;)
+{
+小OH为您找到了[all]，是您要的吗?	1
+小OH为您找到了[all]，是你喜欢的吗?	1
+}
+
+MA:	offerconf(__tgt1__=all,slot1=all;__tgt2__=time_show,slot2=time_show)
+{
+小OH为您找到了[all]，请问您是要找[time_show]上映的电影吗?	1
+小OH为您找到了[all]，请问您是想看[time_show]上映的电影吗?	1
+}
+
+
+MA:	offersplit(__tgt1__=score_val,slot1=score_val;__tgt2__=actor,slot2=actor)
+{
+为你找到了如下几部电影，请问你是要看[actor]主演的?	1
+}
+
+MA:	offersplit(__tgt1__=vote_val,slot1=vote_val;__tgt2__=actor,slot2=actor)
+{
+为你找到了如下几部电影，请问你是要看[actor]主演的?	1
+}
+
+MA:	offersplit(__tgt1__=all,slot1=all;__tgt2__=actor,slot2=actor)
+{
+为你找到了多部[all]，请问你是要看[actor]主演的?	1
+}
+
+MA:	offersplit(__tgt1__=score_val,slot1=score_val;__tgt2__=name,slot2=name)
+{
+为你找到了如下几部电影，请问你是要看[name]?	1
+}
+MA:	offersplit(__tgt1__=vote_val,slot1=vote_val;__tgt2__=name,slot2=name)
+{
+为你找到了如下几部电影，请问你是要看[name]?	1
+}
+MA:	offersplit(__tgt1__=all,slot1=all;__tgt2__=name,slot2=name)
+{
+为你找到了多部[all]，请问你是要看[name]?	1
+}
+
+MA:	offersplit(__tgt1__=score_val,slot1=score_val;__tgt2__=time_show,slot2=time_show)
+{
+为你找到了如下几部电影，请问你是要看[time_show]?	1
+}
+MA:	offersplit(__tgt1__=vote_val,slot1=vote_val;__tgt2__=time_show,slot2=time_show)
+{
+为你找到了如下几部电影，请问你是要看[time_show]?	1
+}
+MA:	offersplit(__tgt1__=all,slot1=all;__tgt2__=time_show,slot2=time_show)
+{
+为你找到了多部[all]，请问你是要看[time_show]?	1
+}
+
+MA:	offersplit(__tgt1__=score_val,slot1=score_val;__tgt2__=mhuman,slot2=actor::director::editor)
+{
+为你找到了如下几部电影，请问你是要看[actor]主演，还是[actor]导演，还是[actor]编剧的影片?	1
+}
+
+MA:	offersplit(__tgt1__=vote_val,slot1=vote_val;__tgt2__=mhuman,slot2=actor::director::editor)
+{
+为你找到了如下几部电影，请问你是要看[actor]主演，还是[actor]导演，还是[actor]编剧的影片?	1
+}
+
+MA:	offersplit(__tgt1__=all,slot1=all;__tgt2__=mhuman,slot2=actor::director::editor)
+{
+为你找到了多部[all]，请问你是要看[actor]主演，还是[actor]导演，还是[actor]编剧的影片?	1
+}
+
+MA:	offersplit(__tgt1__=score_val,slot1=score_val;__tgt2__=time,slot2=time_cam::time_show)
+{
+为你找到了如下几部电影，请问你是要看[time_cam]拍摄的，还是[time_show]上映的影片?	1
+}
+
+MA:	offersplit(__tgt1__=vote_val,slot1=vote_val;__tgt2__=time,slot2=time_cam::time_show)
+{
+为你找到了如下几部电影，请问你是要看[time_cam]拍摄的，还是[time_show]上映的影片?	1
+}
+
+MA:	offersplit(__tgt1__=all,slot1=all;__tgt2__=time,slot2=time_cam::time_show)
+{
+为你找到了多部[all]，请问你是要看[time_cam]拍摄的，还是[time_show]上映的影片?	1
+}
+
+MA:	offersplit(__tgt1__=score_val,slot1=score_val;__tgt2__=company,slot2=production::issuer)
+{
+为你找到了如下几部电影，请问你是要看[production]制作的，还是[issuer]发行的影片?	1
+}
+
+MA:	offersplit(__tgt1__=vote_val,slot1=vote_val;__tgt2__=company,slot2=production::issuer)
+{
+为你找到了如下几部电影，请问你是要看[production]制作的，还是[issuer]发行的影片?	1
+}
+
+MA:	offersplit(__tgt1__=all,slot1=all;__tgt2__=company,slot2=production::issuer)
+{
+为你找到了多部[all]，请问你是要看[production]制作的，还是[issuer]发行的影片?	1
+}
+
+MA: informconf(__tgt1__=name,slot1=name;__tgt2__=name,slot2=name)
+{
+[name]，请问您是要找[name]的电影吗？	1
+}
+
+MA: informconf(__tgt1__=type,slot1=type;__tgt2__=type,slot2=type)
+{
+[type]，请问您是要找[type]影片吗？	1
+}
+
+MA: informconf(__tgt1__=actor,slot1=actor;__tgt2__=actor,slot2=actor)
+{
+[actor]，请问您是要找[actor]演的电影吗？	1
+}
+
+MA: informconf(__tgt1__=director,slot1=director;__tgt2__=director,slot2=director)
+{
+[director]，请问您是要找[director]导演的电影吗？	1
+}
+
+MA: informconf(__tgt1__=editor,slot1=editor;__tgt2__=editor,slot2=editor)
+{
+[editor]，请问您是要找[editor]编剧的电影吗？	1
+}
+
+MA: informconf(__tgt1__=production,slot1=production;__tgt2__=production,slot2=production)
+{
+[production]，请问您是要找[production]制作的电影吗？	1
+}
+
+MA: informconf(__tgt1__=issuer,slot1=issuer;__tgt2__=issuer,slot2=issuer)
+{
+[issuer]，请问您是要找[issuer]发行的电影吗？	1
+}
+
+MA: informconf(__tgt1__=time_cam,slot1=time_cam;__tgt2__=time_cam,slot2=time_cam)
+{
+[time_cam]，请问您是要找[time_cam]拍摄的电影吗？	1
+}
+
+MA: informconf(__tgt1__=time_show,slot1=time_show;__tgt2__=time_show,slot2=time_show)
+{
+[time_show]，请问您是要找[time_show]上映的电影吗？	1
+}
+
+MA: informconf(__tgt1__=award,slot1=award;__tgt2__=award,slot2=award)
+{
+[award]，请问您是要找获[award]奖的电影吗？	1
+}
+
+MA: informconf(__tgt1__=subaward,slot1=subaward;__tgt2__=subaward,slot2=subaward)
+{
+[subaward]，请问您是要找获[subaward]奖的电影吗？	1
+}
+
+MA: informconf(__tgt1__=time_award,slot1=time_award;__tgt2__=time_award,slot2=time_award)
+{
+[time_award]，请问您是要找[time_award]获奖的电影吗？	1
+}
+
+MA: informconf(__tgt1__=score_val,slot1=score_val;__tgt2__=score_val,slot2=score_val)
+{
+[score_val]，请问您想根据小OH评分来找电影吗？	1
+}
+
+MA: informconf(__tgt1__=vote_val,slot1=vote_val;__tgt2__=vote_val,slot2=vote_val)
+{
+[vote_val]，请问您想根据小OH播放次数来找电影吗？	1
+}
+
+MA: informconf(__tgt1__=nation,slot1=nation;__tgt2__=nation,slot2=nation)
+{
+[nation]，请问您是要找[nation]电影吗？	1
+}
+
+MA: informconf(__tgt1__=lang,slot1=lang;__tgt2__=lang,slot2=lang)
+{
+[lang]，请问您是要找[lang]电影吗？	1
+}
+
+MA: informconf(__tgt1__=cost,slot1=cost;__tgt2__=cost,slot2=cost)
+{
+[cost]，请问您是要找制作成本[cost]的电影吗？	1
+}
+
+MA: informconf(__tgt1__=len,slot1=len;__tgt2__=len,slot2=len)
+{
+[len]，请问您是要找片长[len]的电影吗？	1
+}
+
+MA: informconf(__tgt1__=color,slot1=color;__tgt2__=color,slot2=color)
+{
+[color]，请问您是要找[color]电影吗？	1
+}
+
+MA: informconf(__tgt1__=tag,slot1=tag;__tgt2__=tag,slot2=tag)
+{
+[tag]，请问您是要找[tag]电影吗？	1
+}
+
+MA: informconf(__tgt1__=bot,slot1=bot;__tgt2__=bot,slot2=bot)
+{
+[bot]，请问您是要找票房[bot]电影吗？	1
+}
+
+MA: informconf(__tgt1__=crowd,slot1=crowd;__tgt2__=crowd,slot2=crowd)
+{
+[crowd]，请问您是要找适合[crowd]看的电影吗？	1
+}
+
+MA: informconf(__tgt1__=score_name,slot1=score_name::score_val;__tgt2__=score_name,slot2=score_name::score_val)
+{
+[score_val]，请问您是要找[score_val]的电影吗？	1
+}
+
+MA: informconf(__tgt1__=vote_name,slot1=vote_name::vote_val;__tgt2__=vote_name,slot2=vote_name::vote_val)
+{
+[vote_val]，请问您是要找[vote_val]的电影吗？	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=name,slot2=name)
+{
+[name],您是要找叫[name]的电影吗?	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=actor,slot2=actor)
+{
+[name],你确定是要找[actor]演的电影吗?	1.5
+}
+	
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=cost,slot2=cost)
+{
+[name],你确定是要找制作成本[cost]的电影吗?	1
+}
+	
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=len,slot2=len)
+{
+[name],你确定要时长[len]的电影吗?	1
+}
+	
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=mhuman,slot2=mhuman)
+{
+[name],请问你是要找[mhuman]的电影吗?	1
+}
+	
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=company,slot2=company)
+{
+[name],你是说[company]么?	1
+[name],请问你是要找[company]的电影么?	1
+}
+	
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=award,slot2=award)
+{
+[name],请问您是要找获得[award]的电影吗?	1
+}
+	
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=relation::name,slot2=relation::name)
+{
+[name],请问你是想要找和电影[name]相似的电影吗?	1
+[name],请问你是想要找和[name]类似的电影吗?	1
+}
+	
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=type,slot2=type)
+{
+[name],你是要找[type]片吗?	1
+}
+	
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=lang,slot2=lang)
+{
+[name],你确信只要[lang]的电影吗?	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=time_show,slot2=time_show)
+{
+[name],你确信只要[time_show]上映的吗?	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=nation,slot2=nation)
+{
+[name],你确信只要[nation]电影?	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=nation::time_show,slot2=nation::time_show)
+{
+[name],要不要看看[time_show]上映的[nation]电影?	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=type::time_show,slot2=type::time_show)
+{
+[name],你确信只要[time_show]上映的[type]电影?	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=type::actor,slot2=type::actor)
+{
+[name],你确信只要[actor]演的[type]片?	1
+[name],你确信只要[actor]的[type]电影?	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=type::nation,slot2=type::nation)
+{
+[name],你确信只要[nation]的[type]片?	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=director,slot2=director)
+{
+[name],你确信只要[director]导演的影片?	1
+}
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=name)
+{
+抱歉，目前小OH没有找到，你确信是要找叫[name]的电影吗?
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=all,slot2=all)
+{
+抱歉，小OH没有找到，你确信是要找[all]吗？	1
+}
+
+MA:	informconf(slot1=db_status;__tgt2__=operation,slot2=operation)
+{
+[db_status]，需要为您[operation]吗？	1
+}
+
+MA:	informconf(__tgt1__=name,slot1=name;__tgt2__=all,slot2=all)
+{
+抱歉，小OH没有找到，你确信是要找[all]吗？	1
+}
+
+
+
+
+
+
+
+
+
+MA:	offerreq(__tgt1__=all,slot1=all;__tgt2__=actor)
+{
+为你找到了多部[all]，你要看谁演的?	1
+}
+
+MA:	offerreq(__tgt1__=all,slot1=all;__tgt2__=time_show)
+{
+为你找到了多部[all]，你要看什么时间上演的电影?	1
+}
+
+MA:	offerreq(__tgt1__=all,slot1=all;__tgt2__=time_award)
+{
+为你找到了多部[all]，你要看什么时间获奖的电影?	1
+}
+
+MA:	offerreq(__tgt1__=all,slot1=all;__tgt2__=subaward)
+{
+为你找到了多部[all]，你要看获什么奖项的电影?	1
+}
+
+MA:	offerreq(__tgt1__=all,slot1=all;__tgt2__=nation)
+{
+为你找到了多部[all]，你要看哪个国家的?	1
+}
+
+MA:	offerreq(__tgt1__=all,slot1=all;__tgt2__=type)
+{
+为你找到了多部[all]，你要看什么类型的?	1
+}
+
+
+
+
+MA:	offerreq(__tgt1__=score_val,slot1=score_val;__tgt2__=actor)
+{
+为你找到了如下[score_val]的电影，你要看谁演的?	1
+}
+
+MA:	offerreq(__tgt1__=score_val,slot1=score_val;__tgt2__=time_show)
+{
+为你找到了如下[score_val]的电影，你要看什么时间上演的电影?	1
+}
+
+MA:	offerreq(__tgt1__=score_val,slot1=score_val;__tgt2__=time_award)
+{
+为你找到了如下[score_val]的电影，你要看什么时间获奖的电影?	1
+}
+
+MA:	offerreq(__tgt1__=score_val,slot1=score_val;__tgt2__=subaward)
+{
+为你找到了如下[score_val]的电影，你要看获什么奖项的电影?	1
+}
+
+MA:	offerreq(__tgt1__=score_val,slot1=score_val;__tgt2__=nation)
+{
+为你找到了如下[score_val]的电影，你要看哪个国家的?	1
+}
+
+MA:	offerreq(__tgt1__=score_val,slot1=score_val;__tgt2__=type)
+{
+为你找到了如下[score_val]的电影，你要看什么类型的?	1
+}
+
+
+
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=actor)
+{
+为你找到了如下[time_show]上映的电影，你要看谁演的?	1
+}
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=time_award)
+{
+为你找到了如下[time_show]上映的电影，你要看什么时间获奖的电影?	1
+}
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=subaward)
+{
+为你找到了如下[time_show]上映的电影，你要看获什么奖项的电影?	1
+}
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=nation)
+{
+为你找到了如下[time_show]上映的电影，你要看哪个国家的?	1
+}
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=type)
+{
+为你找到了如下[time_show]上映的电影，你要看什么类型的?	1
+}
+
+
+
+
+
+MA:	offerreq(__tgt1__=time_award,slot1=time_award;__tgt2__=actor)
+{
+为你找到了如下[time_award]获奖的电影，你要看谁演的?	1
+}
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=time_award)
+{
+为你找到了如下[time_show]获奖的电影，你要看什么时间获奖的电影?	1
+}
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=subaward)
+{
+为你找到了如下[time_show]获奖的电影，你要看获什么奖项的电影?	1
+}
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=nation)
+{
+为你找到了如下[time_show]获奖的电影，你要看哪个国家的?	1
+}
+
+MA:	offerreq(__tgt1__=time_show,slot1=time_show;__tgt2__=type)
+{
+为你找到了如下[time_show]获奖的电影，你要看什么类型的?	1
+}
+
+
+MA:	offerreq(__tgt1__=vote_val,slot1=vote_val;__tgt2__=actor)
+{
+为你找到了如下[vote_val]的电影，你要看谁演的?	1
+}
+
+MA:	offerreq(__tgt1__=vote_val,slot1=vote_val;__tgt2__=time_show)
+{
+为你找到了如下[vote_val]的电影，你要看什么时间上演的电影?	1
+}
+
+MA:	offerreq(__tgt1__=vote_val,slot1=vote_val;__tgt2__=time_award)
+{
+为你找到了如下[vote_val]的电影，你要看什么时间获奖的电影?	1
+}
+
+MA:	offerreq(__tgt1__=vote_val,slot1=vote_val;__tgt2__=subaward)
+{
+为你找到了如下[vote_val]的电影，你要看获什么奖项的电影?	1
+}
+
+MA:	offerreq(__tgt1__=vote_val,slot1=vote_val;__tgt2__=nation)
+{
+为你找到了如下[vote_val]的电影，你要看哪个国家的?	1
+}
+
+MA:	offerreq(__tgt1__=vote_val,slot1=vote_val;__tgt2__=type)
+{
+为你找到了如下[vote_val]的电影，你要看什么类型的?	1
+}
+
+
+MA:	confrestart()
+{
+你确信需要重新开始吗？	1
+你确信需要重起吗？	1
+}
+
+MA:	restart()
+{
+好的，重新开始对话。	1
+好的，现在可以重新开始对话。	1
+}
+
+MA:	askrepeat()
+{
+小OH没听清，请再说一遍。	1
+对不起，小OH没听清，能再说一遍不?	1
+能再说一遍吗?	1
+请保持安静，中速再说一遍吗?	1
+哎呀呀，你说你，肿么说话细声细气的像被风刮跑了，当然是听不清的啦.
+大点声嘛，又浪费不了二两力.
+}
+
+MA:	bye()
+{
+再见!	1
+白白！	1
+三有娜拉	0.5
+很高兴为您服务，欢迎您再次使用。	2
+很高兴为您服务，再见。 1
+很高兴为您服务，随时恭候您的再次使用。	2
+}
+MA:	hello()
+{
+您好，思必驰小OH可以帮助您通过智能对话找电影。
+您好！
+您好！很高兴为您服务
+}
+MA:	rehelp()
+{
+小OH我可是无所不能，无所不通，能够为你找到各种你想要的电影哦.
+小OH可以用智能对话方式，为你找到你想要的影片。	3
+}
+
+MA:	rehelp(__tgt1__=actor)
+{
+小OH收藏了中外几万名著名演员的大作，你可以直接说演员的名字来找电影，如刘德华，尼古拉斯凯奇等等。
+}
+
+MA:	rehelp(__tgt1__=type)
+{
+小OH收藏了数十种类型的各类影片，你可以直接说出你喜欢的电影类型来找电影，如爱情片，动作片等等。
+}
+
+MA:	rehelp(__tgt1__=lang)
+{
+小OH收藏了普通话，粤语，英语，法语，韩语，日语等数十种不同语言的电影，你可以直接说出你想要找的语言。
+}
+
+MA:	rehelp(__tgt1__=nation)
+{
+小OH电影库覆盖了中外60多个国家和地区的电影，你可以直接说出你想要找电影的国家和地区。
+}
+
+MA:	rehelp(__tgt1__=time_show)
+{
+小OH电影库几乎覆盖了各个不同年代的电影，你可以直接说你想要找电影的时间段，年份，或者其他时间模糊说法。
+}
+
+MA:	recomplain()
+{
+哎呀呀，人家也才刚刚出道，多多体谅一下下嘛.
+小OH很伤心。	3
+小OH很遗憾。
+羞辱小OH是不是很有意思。
+如果欺负小OH能带给你快乐，小OH愿意接受。
+或许你该重新学学礼貌功课。
+}
+
+
+MA:	ok(__tgt1__=operation,slot1=operation)
+{
+好嘞！	5
+木有问题！
+诺！
+好的。
+得令。
+遵命，主人。
+好的，很高兴为您效劳。
+}
+
+MA:	hangup()
+{
+木有问题!
+诺!
+好的,小OH等你	5
+遵命，主人。
+}
+
+MA:	thanks()
+{
+你的肯定是小OH进步的最大动力。
+谢谢!
+哎呀，这么说伦家，多不好意思的.
+嘿嘿，小OH好有成就感。	10
+嘿嘿，小OH知足了。
+}
+
+MA: unsupport()
+{
+抱歉,小OH暂不支持你这样的说法。
+}
+
+MA: unsupport(slot1=unsupported)
+{
+抱歉,[unsupported]。
+}
+
+
+MA: affirm()
+{
+是的。
+}
+
+MA: negate(__tgt1__=all,slot1=all)
+{
+不是，[all]。
+}
+
+MA: select(__tgt1__=all,slot1=all)
+{
+[all]?
+}
+

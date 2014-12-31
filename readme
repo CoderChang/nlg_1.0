@@ -1,0 +1,12 @@
+
+1.
+Before using the nlg, you should make sure that the configuration files for right are right.
+The configuration files include the "nlg.cfg","ontology.json" and "nlg.res.en":
+	*The file "nlg.cfg" describes the directory of the other two files, i.e. "ontology.json" and "nlg.res.en";
+	*The file "ontology.json" is the json format for ontology, which should be consistent with the onlology file for dialog manager;
+	*The file "nlg.res.en" is template file for nlg.
+
+2.
+To run the nlg example, 
+	*cd src
+	*python nlg.py (or python nlg_test.py)(The input is the DSTC2 dialog act format, which is described in "dialog_acts_def.txt", and the output is text)
