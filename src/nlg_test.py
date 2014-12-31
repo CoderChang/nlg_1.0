@@ -7,6 +7,7 @@ if __name__=="__main__":
 
 	sys_summary_action = "offerselect"
 	sys_master_action_list1 = [
+	
 		{
 			"slots":[
 				["name","none1"],
